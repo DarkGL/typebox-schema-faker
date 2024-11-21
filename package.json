@@ -1,0 +1,50 @@
+{
+    "name": "typebox-schema-faker",
+    "version": "0.0.1",
+    "description": "Generates mock data from typebox schema",
+    "main": "dist/index.js",
+    "types": "dist/index.d.ts",
+    "scripts": {
+        "ci": "npm run format && npm run lint && npm run build && npm run check-exports",
+        "build": "npx tsc --build",
+        "format": "npx @biomejs/biome format --write ./src",
+        "lint": "npx @biomejs/biome lint --write ./src",
+        "prepare": "husky",
+        "check-exports": "attw --pack . --ignore-rules=cjs-resolves-to-esm",
+        "local-release": "changeset version && changeset publish",
+        "prepublishOnly": "npm run ci"
+    },
+    "keywords": [
+        "typebox",
+        "fake",
+        "stub",
+        "mock",
+        "test",
+        "json",
+        "schema"
+    ],
+    "homepage": "https://github.com/DarkGL/typebox-schema-faker",
+    "bugs": {
+        "url": "https://github.com/DarkGL/typebox-schema-faker/issues"
+    },
+    "author": "Rafal Wiecek <contact@darkgl.com> (https://x.com/darkgl_)",
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/DarkGL/typebox-schema-faker.git"
+    },
+    "engines": {
+        "node": ">=20.17.0"
+    },
+    "files": [
+        "dist"
+    ],
+    "type": "module",
+    "license": "MIT",
+    "devDependencies": {
+        "@arethetypeswrong/cli": "^0.16.4",
+        "@biomejs/biome": "1.9.4",
+        "@changesets/cli": "^2.27.9",
+        "husky": "^9.1.6",
+        "typescript": "^5.6.3"
+    }
+}
