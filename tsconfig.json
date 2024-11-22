@@ -15,11 +15,12 @@
   
       "module": "NodeNext",
       "outDir": "dist",
-      "rootDir": "src",
+      "rootDir": "./",
       "sourceMap": true,
   
       "declaration": true,
 
       "lib": ["es2022"]
-    }
+    },
+    "include": ["src/**/*.ts", "tests/**/*.ts"]
   }

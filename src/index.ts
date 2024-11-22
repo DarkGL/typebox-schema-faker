@@ -1,8 +1,8 @@
-function fake(schema: any) {
-    return {};
-}
+import type { TSchema } from '@sinclair/typebox';
 
-function seed(seed: number) {
+import { seed } from './faker.js'
+
+function fake(schema: TSchema) {
     return {};
 }
 
