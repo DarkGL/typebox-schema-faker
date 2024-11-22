@@ -1,3 +1,5 @@
+// https://github.com/soc221b/zod-schema-faker/blob/main/src/faker.ts
+
 import { Faker, faker as _faker } from '@faker-js/faker'
 import RandExp from 'randexp'
 
