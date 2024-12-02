@@ -9,6 +9,8 @@ describe('should generate object of fake data', () => {
         const schema = Type.Object({
             number: Type.Number(),
             string: Type.String(),
+            bool: Type.Boolean(),
+            int: Type.Integer(),
         });
 
         seed(1);
@@ -18,6 +20,7 @@ describe('should generate object of fake data', () => {
         expect(data).toBeInstanceOf(Object);
         expect(data.number).toBeTypeOf('number');
         expect(data.string).toBeTypeOf('string');
+        expect(data.bool).toBeTypeOf('boolean');
     });
 })
   
