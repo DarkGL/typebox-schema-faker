@@ -43,6 +43,10 @@ function generate(schema: TSchema) {
     }
     else if (schema[Kind] === 'Integer') {
         return runFake(faker => faker.number.int());
+    } else if(schema[Kind] === 'Null') {
+        return null;
+    } else if(schema[Kind] === 'Literal') {
+        return schema.const;
     }
 }
 
